@@ -1,0 +1,32 @@
+{
+    "name": "amn-nats",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "clean": "del ./build/*",
+        "build": "npm run clean && tsc",
+        "pub": "npm run build && npm version patch && npm publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mze-runner/amn-nats.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mze-runner/amn-nats/issues"
+    },
+    "homepage": "https://github.com/mze-runner/amn-nats#readme",
+    "dependencies": {},
+    "peerDependencies": {
+        "node-nats-streaming": ">= 0.3.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.7",
+        "del-cli": "^3.0.1",
+        "node-nats-streaming": "^0.3.2",
+        "typescript": "^3.9.6"
+    }
+}

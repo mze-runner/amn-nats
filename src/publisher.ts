@@ -1,15 +1,17 @@
 import { Stan } from 'node-nats-streaming';
+import { Logger } from './logger';
 
 interface Event {
     subject: string; // Subjects;
     payload: any;
 }
 
-export abstract class Publisher<T extends Event> {
+export abstract class Publisher<T extends Event> extends Logger {
     abstract subject: T['subject'];
     private client: Stan;
 
-    constructor(client: Stan) {
+    constructor(client: Stan, logger?: any) {
+        super(logger);
         this.client = client;
     }
 
@@ -20,9 +22,12 @@ export abstract class Publisher<T extends Event> {
                 JSON.stringify(payload),
                 (err) => {
                     if (err) {
+                        this.log(
+                            `Publisher error. Subject: '${this.subject}', error: ${err.message}`
+                        );
                         return reject(err);
                     }
-                    console.log('Event published to subject', this.subject);
+                    this.log(`Event published to subject ${this.subject}`);
                     resolve();
                 }
             );

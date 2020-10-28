@@ -1,6 +1,6 @@
 {
     "name": "amn-nats",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "description": "",
     "main": "./build/index.js",
     "types": "./build/index.d.ts",

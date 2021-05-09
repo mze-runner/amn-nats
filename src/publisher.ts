@@ -10,7 +10,7 @@ export abstract class Publisher<T extends Event> extends Logger {
     abstract subject: T['subject'];
     private client: Stan;
 
-    constructor(client: Stan, logger?: any) {
+    constructor(client: Stan, logger?: Function) {
         super(logger);
         this.client = client;
     }

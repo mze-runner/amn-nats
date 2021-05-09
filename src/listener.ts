@@ -13,7 +13,7 @@ export abstract class Listener<T extends Event> extends Logger {
     private client: Stan;
     protected ackWait = 5 * 1000;
 
-    constructor(client: Stan, logger?: any) {
+    constructor(client: Stan, logger?: Function) {
         super(logger);
         this.client = client;
     }

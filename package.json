@@ -23,14 +23,15 @@
         "url": "https://github.com/mze-runner/amn-nats/issues"
     },
     "homepage": "https://github.com/mze-runner/amn-nats#readme",
-    "dependencies": {},
-    "peerDependencies": {
-        "node-nats-streaming": ">= 0.3.0"
-    },
     "devDependencies": {
         "@types/express": "^4.17.7",
         "del-cli": "^3.0.1",
-        "node-nats-streaming": "^0.3.2",
-        "typescript": "^3.9.6"
+        "typescript": "^4.2.4"
+    },
+    "peerDependencies": {
+        "node-nats-streaming": ">= 0.3.0"
+    },
+    "dependencies": {
+        "node-nats-streaming": "^0.3.2"
     }
 }

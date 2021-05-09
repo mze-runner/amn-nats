@@ -1,7 +1,7 @@
 // TODO: implement initialization of NATS client!
 import nats, { Stan } from 'node-nats-streaming';
 
-class NatsClient {
+class StanClient {
     private _client?: Stan;
 
     get client() {
@@ -35,4 +35,4 @@ class NatsClient {
     }
 }
 
-export const amnNATS = new NatsClient();
+export const amnNATS = new StanClient();

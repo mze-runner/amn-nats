@@ -35,4 +35,4 @@ class StanClient {
     }
 }
 
-export const amnNATS = new StanClient();
+export const amnStan = new StanClient();

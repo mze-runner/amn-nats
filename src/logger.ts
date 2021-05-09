@@ -1,6 +1,6 @@
 export abstract class Logger {
     #logger: any;
-    constructor(logger: any) {
+    constructor(logger?: any) {
         this.#logger = !logger ? undefined : logger;
     }
 

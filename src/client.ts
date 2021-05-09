@@ -35,4 +35,4 @@ class NatsClient {
     }
 }
 
-export const natsClient = new NatsClient();
+export const amnNATS = new NatsClient();
